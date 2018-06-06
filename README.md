@@ -4,7 +4,7 @@ This script applies ACLs from a list to specified dirs.
 
 #### 1. Notes
 
-- The script will automatically update itself using `git` if it is available.
+- The script is able to automatically update itself using `git`.
 
 #### 2. Installation
 
@@ -24,6 +24,8 @@ This script applies ACLs from a list to specified dirs.
 cd /volume1/sysadmin
 # clone the following repo
 git clone https://github.com/alexanderharm/syno-acl-tool
+# to enable autoupdate
+touch syno-acl-tool/autoupdate
 ```
 
 ##### 2.3 Install this script (manually)
@@ -95,5 +97,3 @@ Examples:
 # ACLs inherited from /volume1/SharedFolder1/another/parentdir
 # + write permissions for group office
 ```
-
-

@@ -22,7 +22,7 @@ fi
 today=$(date +'%Y-%m-%d')
 
 # self update run once daily
-if [ ! -z "${git}" ] && [ -d "$(dirname "$0")/.git" ]; then
+if [ ! -z "${git}" ] && [ -d "$(dirname "$0")/.git" ] && [ -f "$(dirname "$0")/autoupdate" ]; then
 	if [ ! -f /tmp/.SynoAclToolUpdate ] || [ "${today}" != "$(date -r /tmp/.SynoAclToolUpdate +'%Y-%m-%d')" ]; then
 		echo "Checking for updates..."
 		# touch file to indicate update has run once
