@@ -41,7 +41,7 @@ today=$(date +'%Y-%m-%d')
 
 	# propagate all acls
 
-	system("LC_ALL=C /bin/find \"" path "\" -mindepth 1 -name '\''#recycle'\'' -prune -o -name '\''#snapshot'\'' -prune -o -name '\''*/@eaDir/*'\'' -prune -o -name '\''*/.TemporaryItems/*'\'' -prune -o -exec /usr/syno/bin/synoacltool -enforce-inherit {} '\'';'\''")
+	system("LC_ALL=C /bin/find \"" path "\" -mindepth 1 -name '\''#recycle'\'' -prune -o -name '\''#snapshot'\'' -prune -o -name '\''*/@eaDir/*'\'' -prune -o -name '\''*/.TemporaryItems/*'\'' -prune -o -exec /usr/syno/bin/synoacltool -enforce-inherit {} '\''+'\''")
 
 }' $1
 
